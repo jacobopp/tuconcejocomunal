@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_inscripcion_registro_form">
+            <field name="name">libro registro_form</field>
+            <field name="model">libro.jacob</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Registro">
+                    <group>
+                        <field name="nombre_libro"/>
+                        <field name="fecha"/>
+                        <field name="nombre_editorial"/>
+                        <field name="nombre_autor"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_inscripcion_registro_tree">
+            <field name="name">inscripcion_registro_tree</field>
+            <field name="model">libro.jacob</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Registro">
+                    <field name="nombre_libro"/>
+                    <field name="fecha"/>
+                    <field name="nombre_editorial"/>
+                    <field name="nombre_autor"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_libro_registro">
+            <field name="name">libro Registro</field>
+            <field name="res_model">libro.jacob</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+    </data>
+</openerp>

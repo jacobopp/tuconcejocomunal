@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_inscripcion_registro_form">
+            <field name="name">inscripcion registro_form</field>
+            <field name="model">inscripcion.jacob</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Registro">
+                    <group>
+                        <field name="nombre_usuario"/>
+                        <field name="cedula"/>
+                        <field name="telefono"/>
+                        <field name="direccion"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_inscripcion_registro_tree">
+            <field name="name">inscripcion_registro_tree</field>
+            <field name="model">inscripcion.jacob</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Registro">
+                    <field name="nombre_usuario"/>
+                    <field name="cedula"/>
+                    <field name="telefono"/>
+                    <field name="direccion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_inscripcion_registro">
+            <field name="name">incripcion Registro</field>
+            <field name="res_model">inscripcion.jacob</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Incripcion" id="menu_inscripcion" sequence="10"/>
+        <menuitem name="Inicio" parent="menu_inscripcion" id="menu_inicio" sequence="10"/>
+        <menuitem name="Registro" parent="menu_inicio" action="action_inscripcion_registro" id="menu_registro" sequence="10"/>
+    </data>
+</openerp>
